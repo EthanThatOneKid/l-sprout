@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+  
+<head>
+    
+<title>About Page</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://www.ethandavidson.com/l/img/logo.gif" />
+<style> body {padding: 0; margin: 0;} </style>
+  
+
+<style>
+            
+div.sticky {
+                
+position: -webkit-sticky;              
+position: sticky;
+                
+top: 0;
+                
+border: 2px solid ##FF9800;
+}
+  
+
+h1 {
+background-color: orange
+}      
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    text-align: center;
+}
+</style> 
+
+<style>
+            /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext {
+    top: -5px;
+    left: 105%; 
+}
+
+/* Top Arrow */
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+/* Bottom Tooltip */
+.tooltip .tooltiptext {
+    width: 120px;
+    top: 100%;
+    left: 50%; 
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Fade in effect */
+.tooltip .tooltiptext {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+}
+
+</style>
+
+<div id="code">
+<script src="sketch.js"></script> 
+</div> 
+</head>
+ 
+ 
+<body>
+  
+<font size="5">
+<body bgcolor="#FF9800">
+<table bgcolor="#FFFFFF" align="center">
+<tr><td align="center">
+<div class="sticky">
+<h1>About L-Sprout</h1>
+</div>
+<img src="http://www.ethandavidson.com/l/img/logo.gif" alt="L-Sprout logo" style="width:10;height:10;">
+
+<p>
+	The L-system is named after Astrid Lindenmayer, a Hungarian theoretical biologist<br>
+and botanist. Lindenmayer used L-systems to describe the behaviour of plant <br>
+cells and to model the growth processes of plant development.<br> 
+<br>
+	L-systems have also been used to model the morphology of a variety of organisms<br>
+and can be used to generate self-similar fractals such as iterated function systems.<br>
+<br>
+	I wrote a JavaScript program to simulate this effect.<br>
+Use the button "Generate Srub Pattern" to create more layers of complexity<br>
+onto the shrub, rendering the nearly real-life effect of a growing plant. Out will<br>
+print generations of instructions as the plant gets more and more complex. Each<br>
+generation is built off the previous.<br>
+<br>
+	Because of the complexity of the organism as its instructions grow over each<br>
+generation, there are some limitations. Depending on the starting DNA, you can<br>
+generate between the 3rd-6th generation <em>maximum</em>. Also, there is a strip on<br>
+on the left side of the page that says <em>L-System DNA Archive Contribution</em>. In this,<br>
+you can submit your own discoveries to the archive where other people can find it.<br>
+Maybe someday, this platform can grow to have a library of DNA for this specific<br>
+L-System.<br>
+<br>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6eOBRWIG53Q3d4CDcFAeHMtIOacllQ3I35w1rOBWdNWFDXg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<br> 
+
+<div class="sticky"> <h1>Intructions</h1> </div>
+	The DNA is read by the program and is interpreted as instructions<br>
+Here is the list of rules that the computer reads. The program uses an algorithm<br>
+known as <div class="tooltip"><em>turtle graphics</em><span class="tooltiptext"><a href="https://en.wikipedia.org/wiki/Turtle_graphics">Wikipedia Page</a></span></div>. I have provided a list of the commands needed to<br>
+command the turtle algorithm below:
+<br><br>
+<table>
+<tr>
+<th>Character</th>
+<th>Intruction</th>
+</tr>
+<tr>
+<td><em>F</em></td>
+<td>grow upwards</td>
+</tr>
+<tr>
+<td><em>+</em></td>
+<td>grow rightwards</td>
+</tr>
+<tr>
+<td><em>-</em></td>
+<td>grow leftwards</td>
+</tr>
+<tr>
+<td><em>[</em></td>
+<td>save position; push</td>
+</tr>
+<tr>
+<td><em>]</em></td>
+<td>continue at save; pop</td>
+</tr>
+</table>
+<br><br>
+	Final words, in order to restart the script, please refresh the page. In doing so, the <br>
+<em>random plant</em> will be regenerated, so likewise, the <em>seeded plant</em><br>
+can also be regenerated. Thank you for taking part in this small social media-like<br>
+platform about sharing and looking at plant DNA/code!
+<br>
+</font>
+<p> 
+The JS code can be found by doing the following while on a plant page:<br>
+CTRL+SHIFT+I > Sources > CTRL+P > sketch.js<br><br>
+You can also save an image of your own L-Sprout by<br>
+right-clicking the canvas and choosing "<em>Save image as...</em>."
+</p>
+<br>
+
+<form action="http://www.ethandavidson.com/l/seed/" target="_blank">
+    <input type="submit" value="Grow Seeded Plant" />
+</form>
+<form action="http://www.ethandavidson.com/l/rand/" target="_blank">
+    <input type="submit" value="Grow Random Plant" />
+</form>
+<form action="http://www.ethandavidson.com/l/archive/" target="_blank">
+    <input type="submit" value="DNA Archive" />
+</form>
+<br>
+<font size="1">
+Website built by <a href="https://www.instagram.com/ethanthatonekid/">EthanThatOneKid</a>
+</font>
+<br><br>
+
+</td></tr>
+</table>
+</body>
+</html>
