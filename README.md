@@ -2,7 +2,7 @@
 
 > A social webapp experiment from my early days of web development.
 
-## [Visit!][http://ethandavidson.com/l/]
+## [Visit!](http://ethandavidson.com/l/)
 
 ## About 👉👈
 
